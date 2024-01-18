@@ -3,17 +3,19 @@
 
 {% block contenido %}
 <h1>Listado de Estudiantes</h1>
-    <table style="width: 100%;">
-        <tr>
+<table style="margin-bottom:10px; width: 100%; border: 1px solid #000"  cellspacing="3" cellpadding="4">
+    <tr style="background-color: #ccc;">
             <td>Nombre</td>
             <td>Apellido</td>
             <td>Email</td>
+            <td>Acciones</td>
         </tr>
     {% for estudiante in estudiantes %}
         <tr>
                 <td>{{ estudiante.nombre }}</td>
                 <td>{{ estudiante.apellido }}</td>
                 <td>{{ estudiante.email }}</td>
+                <td><a href="#">Modificar</a><br><a href="#">Eliminar</a></td>
             </tr>
     {% endfor %}
     </table>

@@ -3,15 +3,17 @@
 
 {% block contenido %}
 <h1>Listado de Inscripciones de Alumnos a los Cursos</h1>
-<table style="width: 100%;">
-    <tr>
+<table style="margin-bottom:10px; width: 100%; border: 1px solid #000"  cellspacing="3" cellpadding="4">
+    <tr style="background-color: #ccc;">
         <td>Curso</td>
         <td>Estudiante</td>
+        <td>Acciones</td>
     </tr>
     {% for inscripto in inscriptos %}
         <tr>
             <td>{{ inscripto.curso.nombre }}</td>
             <td>{{ inscripto.estudiante.nombre }} {{ inscripto.estudiante.apellido }}</td>
+            <td><a href="#">Eliminar</a></td>
         </tr>
     {% endfor %}
 </table>

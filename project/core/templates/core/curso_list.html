@@ -3,11 +3,12 @@
 
 {% block contenido %}
 <h1>Listado de Cursos</h1>
-    <table style="width: 100%;">
-        <tr>
+<table style="margin-bottom:10px; width: 100%; border: 1px solid #000"  cellspacing="3" cellpadding="4">
+    <tr style="background-color: #ccc;">
             <td>Curso</td>
             <td>Comisión</td>
             <td>Profesor</td>
+            <td>Acciones</td>
         </tr>
     {% for curso in cursos %}
         <tr>
@@ -15,7 +16,7 @@
             <td>{{ curso.nombre }}</td>
             <td>{{ curso.comision }}</td>
             <td>{{ curso.profesor }}</td>
-            
+            <td><a href="#">Modificar</a><br><a href="#">Eliminar</a></td>
         </tr>
     {% endfor %}
     </table>

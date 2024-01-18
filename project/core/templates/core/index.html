@@ -1,19 +1,18 @@
 {% extends 'core/base.html' %}
 
 {% block contenido %}
+
+    <h1>Profesores</h1>
+    <a href="{% url 'profesor_list' %}">Listado Profesores</a>
+    <a href="{% url 'profesor_create' %}">Alta de Profesores</a>
+
+    <h1>Estudiante</h1>
+    <a href="{% url 'estudiante_list' %}">Listado Estudiante</a>
+    <a href="{% url 'estudiante_create' %}">Alta de Estudiante</a>
     
-    <h1>Entrega Profesores</h1>
 
-    <button><a href="{% url 'profesor_list' %}">Ver Profesores</a></button>
-    <button><a href="{% url 'profesor_create' %}">Crear Profesores</a></button>
-
-    <h1>Entrega Estudiante</h1>
-    <button><a href="{% url 'estudiante_list' %}">Ver Estudiante</a></button>
-    <button><a href="{% url 'estudiante_create' %}">Crear Estudiante</a></button>
-    
-
-    <h1>Entrega Cursos</h1>
-    <button><a href="{% url 'curso_list' %}">Ver Cursos</a></button>
-    <button><a href="{% url 'curso_create' %}">Crear Curso</a></button>
+    <h1>Cursos</h1>
+    <a href="{% url 'curso_list' %}">Listado Cursos</a>
+    <a href="{% url 'curso_create' %}">Alta de Curso</a>
     
 {% endblock contenido %}
