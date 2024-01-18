@@ -2,12 +2,12 @@
 
 
 {% block contenido %}
-    {% for profesor in profesores %}
+    {% for estudiante in estudiantes %}
         <ul>
             <li>
-                {{ profesor.nombre }}
-                {{ profesor.apellido }}
-                {{ profesor.email }}
+                {{ estudiante.nombre }}
+                {{ estudiante.apellido }}
+                {{ estudiante.email }}
             </li>
         </ul>
     {% endfor %}

@@ -2,14 +2,15 @@
 
 
 {% block contenido %}
-    {% for profesor in profesores %}
+    {% for curso in cursos %}
         <ul>
             <li>
-                {{ profesor.nombre }}
-                {{ profesor.apellido }}
-                {{ profesor.email }}
+                {{ curso.nombre }}
+                {{ curso.comision }}
+                {{ curso.profesor }}
             </li>
         </ul>
     {% endfor %}
+
     <button><a href="{% url 'index' %}">Volver</a></button>
 {% endblock contenido %}
