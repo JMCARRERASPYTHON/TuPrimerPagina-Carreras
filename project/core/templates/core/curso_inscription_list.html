@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+
+
+{% block contenido %}
+    {% for inscripto in inscriptos %}
+        <ul>
+            <li>
+                Nombre del Curso:{{ inscripto.curso.nombre }}
+                Estudiante: {{ inscripto.estudiante.nombre }} {{ inscripto.estudiante.apellido }}
+            </li>
+        </ul>
+    {% endfor %}
+
+    <button><a href="{% url 'index' %}">Volver</a></button>
+{% endblock contenido %}

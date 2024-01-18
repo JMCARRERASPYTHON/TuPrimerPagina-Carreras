@@ -17,3 +17,8 @@ class CursoForm(forms.ModelForm):
     class Meta:
         model = models.Curso
         fields = "__all__"
+
+class CursoInscripcionForm(forms.ModelForm):
+    class Meta:
+        model = models.CursoEstudiantes
+        fields = "__all__"

@@ -54,3 +54,18 @@ def curso_create(request):
     else:
         form = forms.CursoForm()
     return render(request, "core/curso_create.html", {"form": form})
+
+def curso_inscription(request):
+    if request.method == "POST":
+        form = forms.CursoInscripcionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("curso_list")
+    else:
+        form = forms.CursoInscripcionForm()
+    return render(request, "core/curso_inscription.html", {"form": form})
+
+def curso_inscription_list(request):
+    consulta = models.CursoEstudiantes.objects.all()
+    contexto = {"inscriptos": consulta}
+    return render(request, "core/curso_inscription_list.html", contexto)
