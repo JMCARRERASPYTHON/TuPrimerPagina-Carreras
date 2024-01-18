@@ -29,5 +29,6 @@ urlpatterns = [
     path('saludo2/', saludo2),
     path('nombre/<nombre>/<apellido>', nombre),
     path('tirar_dados', tirar_dados),
-    path('core/', include("core.urls"))
+    path('core/', include("core.urls")),
+    path('', include("core.urls")),
 ]
