@@ -7,6 +7,29 @@
 </head>
 <body>
     <h1>Sistema de Gestión de Alumnado</h1>
+    <table style="margin-bottom:10px; width: 100%; border: 1px solid #000"  cellspacing="3" cellpadding="4">
+        <tr>
+            <td>Profesores 
+                <ul>
+                    <li><a href="{% url 'profesor_list' %}">Listado Profesores</a></li>
+                    <li><a href="{% url 'profesor_create' %}">Alta de Profesores</a></li>
+                </ul>
+            </td>
+            <td>Estudiantes 
+                <ul>
+                    <li><a href="{% url 'estudiante_list' %}">Listado Estudiante</a></li>
+                    <li><a href="{% url 'estudiante_create' %}">Alta de Estudiante</a></li>
+                </ul>
+            </td>
+            <td>Cursos 
+                <ul>
+                    <li><a href="{% url 'curso_list' %}">Listado Cursos</a></li>
+                    <li><a href="{% url 'curso_create' %}">Alta de Curso</a></li>
+                </ul>
+            </td>
+        </tr>
+
+        </table>
     {% block contenido %}  
         
     {% endblock contenido %}
